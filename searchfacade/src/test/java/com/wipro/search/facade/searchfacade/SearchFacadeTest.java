@@ -29,7 +29,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.wipro.search.facade.ErrorCodes;
 import com.wipro.search.facade.SearchFacade;
-import com.wipro.search.facade.config.AppTestConfig;
+import com.wipro.search.facade.config.AppConfigTest;
 import com.wipro.search.facade.dto.SearchError;
 import com.wipro.search.facade.dto.SearchResultsDTO;
 import com.wipro.search.service.EmptySearchException;
@@ -41,7 +41,7 @@ import com.wipro.search.service.SearchService;
  * The Class SearchFacadeTest.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = { AppTestConfig.class })
+@ContextConfiguration(classes = { AppConfigTest.class })
 public class SearchFacadeTest {
 
 	/** The search service. */

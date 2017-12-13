@@ -16,5 +16,5 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan(basePackages = { "com.wipro.search.service" })
-public class AppTestConfig {
+public class AppConfigTest {
 }

@@ -37,13 +37,13 @@ import com.wipro.search.service.EmptySearchException;
 import com.wipro.search.service.ResultsNotFoundException;
 import com.wipro.search.service.SearchResults;
 import com.wipro.search.service.SearchService;
-import com.wipro.search.service.config.AppTestConfig;
+import com.wipro.search.service.config.AppConfigTest;
 
 /**
  * The Class SearchServiceTest.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = { AppTestConfig.class })
+@ContextConfiguration(classes = { AppConfigTest.class })
 public class SearchServiceTest {
 
 	/** The directory. */
