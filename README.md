@@ -14,14 +14,14 @@ Section B: Steps to setup deploy the Search Application
 1. The search application has the following modules,
 
 <ul>
-<li> A web module searchrest-app which holds the restful service implementation using the Spring Rest Controller
-<li> A Facade java module which acts as a bridge between the searchrest-app and the searchservice java module. This follows the facade design pattern to decouple the web module from the service module and takes care of the orchestration
-<li> A searchservice java module which is the core module which performs the search using Apache Lucene
+<li> A web module <strong>searchrest-app</strong> which holds the restful service implementation using the Spring Rest Controller
+<li> A <strong>searchfacade</strong> java module which acts as a bridge between the searchrest-app and the searchservice java module. This follows the facade design pattern to decouple the web module from the service module and takes care of the orchestration
+<li> A <strong>searchservice</strong> java module which is the core module which performs the search using Apache Lucene
 </ul>
 
 2. checkout all the 3 projects searchrest-app, searchfacade and searchservice
 
-3. These modules use the logback logging implementation and to change the directory location for the logfiles, please edit the logback.xml in the src\main\resources\ folder
+3. These modules use the logback logging implementation and to change the directory location for the logfiles, please edit the logback.xml in the src\main\resources\ folder under the searchrest-app web application
 
 4. indexdir property of the searchservice.properties file in the searchservice module needs to be edited to specify the respective index directory where the files were indexed and stored by Apache Lucene. This is the location which will be used to perform the search.
 
@@ -37,9 +37,9 @@ Section B: Steps to setup deploy the Search Application
 	
 Section C: Steps to run the Application
 ----------------------------------------
-<p>
+
 a. Create a Apache Tomcat web server instance  in the Eclipse IDE and deploy the searchrest-app web appication and start the server
-b. Access the restful service by accessing the http url http://localhost:8080/searchrest-app/search using any restful client. We can use the google's Postman restful client to test the service.
+b. Access the restful service by accessing the http url http://localhost:8080/searchrest-app/search using any restful client. We can use the google's Postman restful client to test the service. Please note that the "localhost" and "8080" refers to the host and port of the server in which the application is deployed.
 c. Open the Postman app and select "Post" as the http method, and in the body section, select "raw" and choose the content type as JSON (application/json) and enter the search query to be performed in the format higlighted below,
 
 {
@@ -47,3 +47,8 @@ c. Open the Postman app and select "Post" as the http method, and in the body se
 }
 
 Note: $text to be searched$ needs to be replaced with the text to be searched
+
+TO DO
+-----
+
+a. Aggregator pom 

@@ -190,7 +190,8 @@ public class SearchService {
 			results = new SearchResults();
 			List<String> fileList = new ArrayList<String>();
 			QueryParser qp = new QueryParser("contents", new StandardAnalyzer());
-			Query idQuery = qp.parse(queryStr);
+			String escapedQueryString = QueryParser.escape(queryStr);
+			Query idQuery = qp.parse(escapedQueryString);
 			TopDocs topDocs = indexSearcher.search(idQuery, 10);
 			if (topDocs != null) {
 
