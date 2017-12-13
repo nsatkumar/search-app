@@ -53,7 +53,7 @@ Section D: TO DO
 
 a. Aggregator pom 
 b. Adding some kind of a watcher implementation to watch the data files for any changes and trigger the automatic re-indexing
-
+c. search for phrases
 
 Section E: Alternatives Considered
 ----------------------------------
@@ -62,7 +62,7 @@ Section E: Alternatives Considered
 
 <ul>
 <li> Doesn't want to re-invent search implementation when there are proven search API's already available
-<li> Scalability - Enterprise search engine imlementations are available which are performance agnostic and scalable
+<li> Scalability - Enterprise search engine implementations are available which are performance agnostic and scalable
 </ul>
 
 2. Elastic Search is definitely another alternative that can be looked up on which provides rest api interfaces to perform the search operations. The only reason why this was not taken up was to come up with a restful service implementation of our own which deals with the Apache Lucene search engine.
