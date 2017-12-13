@@ -27,11 +27,10 @@ public class SimpleFileSearcher {
         if(topDocs != null)
         {
         	int hits = topDocs.scoreDocs.length;
-        	System.out.println("hits"+hits);
-	        for (ScoreDoc sd : topDocs.scoreDocs)
+        	for (ScoreDoc sd : topDocs.scoreDocs)
 	        {
 	            Document d = indexSearcher.doc(sd.doc);
-	            System.out.println(d.get("filename"));
+	            
 
 	        }
         }

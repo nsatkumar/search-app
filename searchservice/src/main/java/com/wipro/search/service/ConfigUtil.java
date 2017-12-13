@@ -45,17 +45,6 @@ public class ConfigUtil {
 		return prop.getProperty(key);
 	}
 
-	/**
-	 * The main method.
-	 *
-	 * @param a
-	 *            the arguments
-	 */
-	public static void main(String a[]) {
 
-		System.out.println("indexdir " + getPropertyValue("indexdir"));
-		System.out.println("hits " + getPropertyValue("hits"));
-
-	}
 
 }

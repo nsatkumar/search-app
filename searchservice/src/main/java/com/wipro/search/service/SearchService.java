@@ -213,10 +213,10 @@ public class SearchService {
 			}
 
 		} catch (ResultsNotFoundException e) {
-			System.out.println("searchIndex ResultsNotFoundException " + e);
+			logger.error("searchIndex ResultsNotFoundException " + e);
 			throw e;
 		} catch (Exception e) {
-			System.out.println("searchIndex Exception " + e);
+			logger.error("searchIndex Exception " + e);
 			e.printStackTrace();
 			throw new Exception("Internal System Error");
 		}

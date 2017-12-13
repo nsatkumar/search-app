@@ -27,7 +27,7 @@ public class SimpleFileIndexer {
         int numIndex = writer.maxDoc();
         writer.close();
             
-        System.out.println("Numer of total files indexed:  " + numIndex);        
+              
     }
     
     private static IndexWriter createWriter() throws IOException
@@ -62,8 +62,6 @@ public class SimpleFileIndexer {
         if (suffix!=null && !f.getName().endsWith(suffix)) {
             return;
         }
-        
-        System.out.println("Indexing file:... " + f.getCanonicalPath());
         
         Document doc = new Document();
         doc.add(new TextField("contents", new FileReader(f)));        
