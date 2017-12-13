@@ -13,9 +13,11 @@ Section B: Steps to setup deploy the Search Application
 
 1. The search application has the following modules,
 
-a. A web module searchrest-app which holds the restful service implementation using the Spring Rest Controller
-b. A Facade java module which acts as a bridge between the searchrest-app and the searchservice java module. This follows the facade design pattern to decouple the web module from the service module and takes care of the orchestration
-c. A searchservice java module which is the core module which performs the search using Apache Lucene
+<ul>
+<li> A web module searchrest-app which holds the restful service implementation using the Spring Rest Controller
+<li> A Facade java module which acts as a bridge between the searchrest-app and the searchservice java module. This follows the facade design pattern to decouple the web module from the service module and takes care of the orchestration
+<li> A searchservice java module which is the core module which performs the search using Apache Lucene
+</ul>
 
 2. checkout all the 3 projects searchrest-app, searchfacade and searchservice
 
