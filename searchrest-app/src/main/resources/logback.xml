@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<property name="LOG_HOME" value="c:/searchlogs/" />
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+	    <layout class="ch.qos.logback.classic.PatternLayout">
+		<Pattern>
+			%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+		</Pattern>
+	    </layout>
+	</appender>
+	<appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+        <fileNamePattern>${LOG_HOME}search-app-log-%d{yyyy-MM-dd}.log</fileNamePattern>
+        <maxHistory>30</maxHistory> 
+        <totalSizeCap>3GB</totalSizeCap>
+    </rollingPolicy>
+    <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+        <maxFileSize>3MB</maxFileSize>
+    </triggeringPolicy>
+    <encoder>
+        <pattern>[%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+	</appender>
+
+	<logger name="org.springframework" level="debug" additivity="false">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="rollingFile" />
+	</logger>
+
+	<logger name="com.wipro.search" level="debug" additivity="false">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="rollingFile" />
+		
+	</logger>
+
+	<root level="error">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>
