@@ -27,19 +27,21 @@ c. A searchservice java module which is the core module which performs the searc
 
 6. Build the modules in the order given below,
 
-	-> searchservice
-	-> searchfacade
-	-> searchrest-app
+	<ol>
+	<li>searchservice
+	<li>searchfacade
+	<li>searchrest-app
+	</ol>
 	
 Section C: Steps to run the Application
 ----------------------------------------
-
+<p>
 a. Create a Apache Tomcat web server instance  in the Eclipse IDE and deploy the searchrest-app web appication and start the server
 b. Access the restful service by accessing the http url http://localhost:8080/searchrest-app/search using any restful client. We can use the google's Postman restful client to test the service.
 c. Open the Postman app and select "Post" as the http method, and in the body section, select "raw" and choose the content type as JSON (application/json) and enter the search query to be performed in the format higlighted below,
 
 {
-"query":"<<text to be searched>>"
+"query":"$text to be searched$"
 }
 
-Note: <<text to be searched>> needs to be replaced with the text to be searched
+Note: $text to be searched$ needs to be replaced with the text to be searched
